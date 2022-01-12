@@ -1,22 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function ContactsList({ contacts }) {
+export default function ContactsList({ contacts, onDeleteContact }) {
   return (
-    <>
-      <h1> Contacts </h1>
-      <ul>
-        {contacts.map(({ id, name, number }) => (
-          <li key={id}>
-            <p>
-              {" "}
-              {name}: {number}
-            </p>
-            <button type="button"> Delete</button>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {contacts.map(({ id, name, number }) => (
+        <li key={id}>
+          <p>
+            {name}: {number}
+          </p>
+          <button onClick={() => onDeleteContact(id)}> Delete</button>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -26,4 +22,5 @@ ContactsList.defaultProps = {
 
 ContactsList.propTypes = {
   contacts: PropTypes.array,
+  onDeleteContact: PropTypes.func,
 };
