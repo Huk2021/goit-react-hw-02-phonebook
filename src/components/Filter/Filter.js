@@ -1,10 +1,11 @@
 import propTypes from "prop-types";
+import { TitleFilter, InputFilter } from "./Fiter.styled";
 
 const Filter = ({ value, onChange }) => {
   return (
     <div>
-      <h2>Find contacts by name</h2>
-      <input type="text" value={value} onChange={onChange} />
+      <TitleFilter>Find contacts by name</TitleFilter>
+      <InputFilter type="text" value={value} onChange={onChange} />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { nanoid } from "nanoid";
+import { AppContainer, Title } from "./App.styled";
 import Form from "./components/Form/Form";
 import Filter from "./components/Filter/Filter";
 import ContactsList from "./components/ContactsList/ContactsList";
@@ -58,16 +59,16 @@ class App extends Component {
     const { filter } = this.state;
     const filterContacts = this.getFilterContacts();
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <AppContainer>
+        <Title>Phonebook</Title>
         <Form onaddContact={this.addContact} />
-        <h1> Contacts </h1>
+        <Title> Contacts </Title>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactsList
           contacts={filterContacts}
           onDeleteContact={this.deleteContact}
         />
-      </div>
+      </AppContainer>
     );
   }
 }
