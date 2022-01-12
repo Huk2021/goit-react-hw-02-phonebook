@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import { PropTypes } from "prop-types";
-import { nanoid } from "nanoid";
 import {
   ContainerForm,
-  Title,
   FormContact,
   Label,
   Input,
@@ -15,17 +12,11 @@ class Form extends Component {
     name: "",
     number: "",
   };
-  static propTypes = {
-    name: PropTypes.string,
-    number: PropTypes.number,
-  };
-
-  nameId = nanoid();
-  telId = nanoid();
 
   handleChange = (e) => {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
+    // console.log(e.target.value)
   };
 
   handleSubmit = (e) => {
@@ -43,11 +34,10 @@ class Form extends Component {
 
     return (
       <ContainerForm onSubmit={this.handleSubmit}>
-        <Title>Phonebook</Title>
         <FormContact>
           <Label> Name</Label>
           <Input
-            id={this.nameId}
+            // id={this.nameId}
             type="text"
             name="name"
             value={name}
@@ -58,7 +48,7 @@ class Form extends Component {
           />
           <Label> Number </Label>
           <Input
-            id={this.telId}
+            // id={this.telId}
             type="tel"
             name="number"
             value={number}
@@ -73,9 +63,5 @@ class Form extends Component {
     );
   }
 }
-
-// Form.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
 
 export default Form;
