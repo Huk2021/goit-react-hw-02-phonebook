@@ -4,14 +4,6 @@ export const ListContact = styled.ul`
   width: 300px;
 `;
 
-export const ItemContact = styled.li`
-  display: flex;
-  justify-content: space-between;
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 15px;
-`;
-
 export const ButtonContact = styled.button`
   width: 80px;
   height: 20px;

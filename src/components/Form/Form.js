@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   ContainerForm,
   FormContact,
@@ -63,5 +64,10 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+};
 
 export default Form;
