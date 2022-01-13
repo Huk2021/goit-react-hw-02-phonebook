@@ -66,8 +66,8 @@ class Form extends Component {
 }
 
 Form.propTypes = {
-  handleChange: PropTypes.func,
-  handleSubmit: PropTypes.func,
+ onaddКонтакт : Типы  реквизитов . функция.isRequired ,
+   
 };
 
 export default Form;
