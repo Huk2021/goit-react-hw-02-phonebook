@@ -66,7 +66,7 @@ class Form extends Component {
 }
 
 Form.propTypes = {
- onaddКонтакт : Типы  реквизитов . функция.isRequired ,
+ onaddContact : PropTypes.func.isRequired,
    
 };
 
