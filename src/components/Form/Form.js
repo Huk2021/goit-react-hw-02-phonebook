@@ -66,8 +66,7 @@ class Form extends Component {
 }
 
 Form.propTypes = {
- onaddContact : PropTypes.func.isRequired,
-   
+  onaddContact: PropTypes.func.isRequired,
 };
 
 export default Form;
